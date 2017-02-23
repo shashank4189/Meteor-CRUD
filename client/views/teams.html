@@ -1,0 +1,21 @@
+<template name="teams">
+    {{#if isCreatingTeam}}
+        <form class="create-team">
+            <input name="name" id='txtTeam' type="text">
+            <button type="submit">Submit</button>
+            <a class="cancel" style="cursor:pointer">Cancel</a>
+        </form>
+
+        {{ else}}
+        <a class="create" style="cursor:pointer">Create</a>
+        {{/if}}
+    <ul>   {{#each teams}}
+        <!--<li>    <h3>{{title}}{{name}}  <a href="#" class="edit">edit</a> <a class="remove" style="cursor:pointer">(x)</a></h3>
+        </li>-->
+        {{> team}}
+    {{/ each}}
+
+
+    </ul>
+
+</template>
