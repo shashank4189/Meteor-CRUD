@@ -6,3 +6,9 @@
 <h1>Foosboom</h1>
 {{> teams}}
 </body>
+<template name="layout">
+    <a href="{{pathFor 'Home'}}">Home</a>
+    <a href="{{pathFor 'About'}}">About</a>
+    <a href="{{pathFor 'Service'}}">Service</a>
+{{> yield}}
+</template>
